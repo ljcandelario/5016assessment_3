@@ -1,3 +1,7 @@
+# Personal project for a Codecademy practice project
+# Takes input from user and creates a random work out based on given input
+# each phase of the workout continues only afer finishing one round and hitting enter
+
 from os import sep
 import random
 
@@ -32,12 +36,13 @@ def choose_one():
 def workout_10():
     print("Ofcourse you do! You can fit in a simple workout in just 10 minutes. We'll be done even before you finish that boring 11 minute Youtube video.")
     
+     # chooses random exercuises from their respective lists
     core = random.sample(core_workouts, k=2)
     arm = random.sample(arm_workouts, k=2)
     back = random.sample(back_workouts, k=3)
     cooldowns = random.sample(cool_downs, k=3)
     
-    Total_workout = []
+    Total_workout = [] # empty list for containing the total work out
     
     core_result = core
     arm_result = arm
