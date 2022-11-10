@@ -1,19 +1,22 @@
 # CodeCademy Python project in creating a Coffee bot that takes customers' orders
 
+# coffee_bot() initializes the the start of ths coffee chat bort
 def coffee_bot():
     print("Welcome to the cafe!")
 
-    size = get_size()
+    size = get_size() 
+    # initializes the get_size function that asks the user for the size of their drink, stores it in size so that I can use it as a variable
     #  print(size)
   
-    drink_type = get_drink_type()
+    drink_type = get_drink_type() 
+     # initializes the get_size function that asks the user for their drink, stores it in drink_type so that I can use it as a variable
     #  print(drink_type)
 
     print('Alright, that\'s a {} {}!'.format(size, drink_type))
     name = input("Can I get your name please? \n>")
     print("Thanks, {}! Your drink will be ready shortly".format(name))
 
-
+# error message customer chose wrong 
 def print_message():
     print("I\'m sorry, I did not understand your selection. Please enter the corresponding letter for your response.")
 
@@ -42,6 +45,7 @@ def order_latte():
         print_message()
         return order_latte()
 
+   
 def get_size():
     res = input("What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ")
     if res == "a":
